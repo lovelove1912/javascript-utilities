@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<script src="convert-number-to-words.js"></script>
+</head>
+<body>
+<p>Input here (maxium is: 999,999,999,999,999):</p>
+<input type="number" id="input" onkeyup="parseNumber(this.value)">
+
+<p>Output here:</p>
+<div id="output"></div>
+<script type="text/javascript">
+	function parseNumber(value) {
+		var parseResult = parseMoneyFromNumberToWords(value);
+		$("#output").html(parseResult);
+	}
+</script>
+</body>
+</html>
